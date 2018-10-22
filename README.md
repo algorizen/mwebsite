@@ -33,4 +33,4 @@ If you find there’s a bug in the code, you are welcome to submit an English is
 
 ## License
 
-MIT. Copyright (c)
+[MIT](https://github.com/algorizen/mwebsite-maizuo/blob/master/LICENSE). Copyright (c)
