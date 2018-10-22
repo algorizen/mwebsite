@@ -1,0 +1,15 @@
+<ul class="coming">
+    {{#each coming}}
+    <li data-id="{{id}}">
+        <img src="{{poster.thumbnail}}" alt="">
+        <div>
+            <h3><span>{{name}}</span><span>></span></h3>
+            <p><span>{{month}}月{{day}}日上映</span><span>星期{{week}}</span></p>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+<div class="foot">
+    <img src="/images/arrow.png" />
+    <b>上拉加载更多...</b>
+</div>

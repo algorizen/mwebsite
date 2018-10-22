@@ -1,0 +1,30 @@
+{{#each schedule}}
+<div class="filmInfo" data-film="{{filmid}}">
+    <div class="title">
+        {{#each filmschedule}}
+        <div class="date">{{text}}</div>
+        {{/each}}
+    </div>
+    {{#each filmschedule}}
+    <ul class="filmdata">
+        {{#each data}}
+        <li>
+            <div class="info">
+                <p>{{startH}}:{{startM}}</p>
+                <p>预计{{endH}}:{{endM}}结束/{{film.language}}{{imagery}}/{{hall.name}}</p>
+            </div>
+            <div class="price">
+                <div>
+                    <p>￥{{price.maizuo}}</p>
+                    <p>￥{{price.cinema}}</p>
+                </div>
+                <div>
+                    >
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{/each}}
+</div>
+{{/each}}

@@ -1,0 +1,155 @@
+#schedule {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    @include flexbox();
+    @include flex-direction(column);
+
+    .head {
+        width: 100%;
+        height: 1.6rem;
+        background: #38403e;
+
+        .main {
+            height: 100%;
+
+            ul {
+                display: inline-block;
+                white-space: nowrap;
+                height: 100%;
+                padding: 0 1.2rem;
+            }
+
+            li {
+                display: inline-block;
+                width: 1.05rem;
+                height: 1.16rem;
+                padding: 0 .1rem;
+                margin-top: .12rem;
+                opacity: 0.6;
+
+                img {
+                    width: 100%;
+                    border: 2px solid #eee;
+
+                }
+
+
+                p {
+                    color: #eee;
+                    text-align: center;
+                    margin-top: .08rem;
+                    font-size: .12rem;
+                    font-weight: normal;
+                }
+            }
+
+            .active {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    .content {
+        @include flex();
+        width: 100%;
+        background: #fff;
+
+
+        .filmInfo {
+            display: none;
+
+
+            .title {
+                width: 100%;
+                height: .4rem;
+                @include border(0 0 2px 0, #e9681f);
+                @include flexbox();
+                @include justify-content(space-around);
+
+                .date {
+                    width: 100%;
+                    height: .4rem;
+                    text-align: center;
+                    color: #555;
+                    font-size: .1rem;
+                    line-height: .35rem;
+                }
+
+                .active {
+                    @include border(0 0 15px 0, #e9681f);
+                }
+            }
+
+            .filmdata {
+                height: 4.8rem;
+                padding: 0 .2rem;
+                overflow-y: scroll;
+                display: none;
+
+                >p {
+                    text-align: center;
+                    margin-top: .3rem;
+                }
+
+                li {
+                    width: 100%;
+                    height: .72rem;
+                    padding-top: .15rem;
+                    @include border(0 0 5px 0, #bbb, dotted);
+
+                    @include flexbox();
+                    @include justify-content(space-between);
+
+                    .info {
+                        p:first-child {
+                            font-size: .16rem;
+                            color: #000;
+                        }
+
+                        p:last-child {
+                            font-size: .08rem;
+                            color: #727272;
+                        }
+                    }
+
+                    .price {
+                        @include flexbox();
+                        @include justify-content(space-between);
+
+                        p:first-child {
+                            font-size: .16rem;
+                            color: #f67222;
+                            line-height: .2rem;
+                        }
+
+                        p:last-child {
+                            font-size: .08rem;
+                            color: #c6c6c6;
+                            text-decoration: line-through;
+                        }
+
+                        div:last-child {
+                            font-size: .2rem;
+                            line-height: .6rem;
+                            color: #c6c6c6;
+                            margin-left: .05rem;
+                        }
+                    }
+                }
+            }
+
+            .active {
+                display: block;
+            }
+        }
+
+        .active {
+            display: block;
+        }
+
+
+
+    }
+}

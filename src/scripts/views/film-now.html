@@ -1,0 +1,17 @@
+<ul class="now">
+    {{#each now}}
+    <li data-id="{{id}}">
+        <img src="{{poster.thumbnail}}" alt="">
+        <div>
+            <h3>{{name}}</h3>
+            <p>{{intro}}</p>
+            <p><span>{{cinemaCount}}家影院上映</span><span>{{watchCount}}人购票</span></p>
+        </div>
+        <h2>{{grade}}<span>></span></h2>
+    </li>
+    {{/each}}
+</ul>
+<div class="foot">
+    <img src="/images/arrow.png" />
+    <b>上拉加载更多...</b>
+</div>

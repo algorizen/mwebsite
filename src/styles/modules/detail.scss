@@ -1,0 +1,56 @@
+#detail {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%
+    }
+
+    >div {
+        h3 {
+            height: .24rem;
+            font-size: .16rem;
+            font-weight: normal;
+            line-height: .24rem;
+            margin: .16rem 0;
+            @include border(0 0 0 .3rem, #E4C89C);
+            text-indent: .2rem;
+        }
+
+        p {
+            height: .18rem;
+            padding: 0 .2rem;
+            margin-bottom: .1rem;
+            font-size: .12rem;
+            line-height: .18rem;
+        }
+
+        p:nth-child(3) {
+            @include ellipsis(null, 1);
+        }
+
+        p:last-child {
+            height: auto;
+            text-indent: 2em;
+            @include ellipsis(null,7);
+        }
+    }
+
+    >div:last-child {
+        width: 1.56rem;
+        height: .36rem;
+        background: #fe8233;
+        @include border-radius(.18rem);
+        color: #fff;
+        text-align: center;
+        line-height: .36rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -.78rem;
+        bottom: .2rem;
+    }
+
+
+}

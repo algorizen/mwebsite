@@ -1,0 +1,40 @@
+#city {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    >div:first-child{
+        li{
+            color: #e2941a;
+        }
+    }
+    >div {
+        width: 100%;
+        background: #fff;
+
+        p {
+            width: 100%;
+            height: .4rem;
+            background: #ebebeb;
+            font-size: .14rem;
+            line-height: .4rem;
+            text-indent: .15rem;
+        }
+
+        ul {
+            @include flexbox();
+            @include flex-direction(row);
+            @include flex-wrap(wrap);
+
+            li {
+                width: 25%;
+                height: .47rem;
+                text-align: center;
+                line-height: .47rem;
+                font-size: .16rem;
+                color: #838383;
+                @include border(0 0 1px 0, #ebebeb);
+                @include ellipsis();
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+#login {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: .3rem .3rem;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    background: #f6f6f6;
+    position: relative;
+    >div {
+        width: 100%;
+        height: .35rem;
+        padding: .06rem .12rem;
+        position: relative;
+        margin-bottom: .2rem;
+        input {
+            border: none;
+            background: #f6f6f6;
+            padding: 0 .15rem;
+            color: #555;
+        }
+
+        >div {
+            position: relative;
+            width: 100%;
+            height: .1rem;
+            @include border(0 2px 2px 2px, #c4c4c4);
+            top: -.06rem
+        }
+    }
+
+    span{
+        width: 1.6rem;
+        height: .4rem;
+        border-radius: .2rem;
+        background: #fe8233;
+        color: #fff;
+        line-height: .4rem;
+        font-size: .16rem;
+        text-align: center;
+        margin-top: .4rem;
+    }
+    .layer {
+        width: 1.5rem;
+        height: .4rem;
+        box-shadow: 3px 3px 3px #ccc;
+        position: absolute;
+        background: rgba($color: #333, $alpha: 0.6);
+        color: #fff;
+        text-align: center;
+        line-height: .28rem;
+        border-radius: .05rem;
+    }
+}

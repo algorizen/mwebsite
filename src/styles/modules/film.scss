@@ -1,0 +1,180 @@
+#film {
+    width: 100%;
+    height: 100%;
+    padding: 0 .15rem;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    background: #f9f9f9;
+    overflow: hidden;
+    .tab {
+        width: 100%;
+        height: .45rem !important;
+        @include border(0 0 1px 0, #fe6e00);
+
+        span {
+            width: 49%;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 44px;
+            height: .44rem;
+        }
+
+        .active {
+            color: #fe6e00;
+            @include border(0 0 10px 0, #fe6e00);
+        }
+    }
+
+    .list {
+        width: 100%;
+        height: 6.5rem;
+        
+        overflow-y: scroll;
+        .foot {
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            height: .5rem;
+            margin-bottom: .2rem;
+            &::after {
+              border: none;
+            }
+          }
+          .foot img {
+            width: .16rem;
+            height: .16rem;
+            transition: transform 150ms;
+            -webkit-transition: transform 150ms;
+          }
+          .up {
+            transform: rotate(360deg) !important;
+            -webkit-transform: rotate(360deg) !important;
+          }
+          .down {
+            @include transform(rotate(180deg));
+          }
+
+        .now {
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+
+            li {
+                width: 100%;
+                height: 1.25rem;
+                padding: .2rem 0;
+                @include flexbox();
+                @include border(0 0 1px 0, #bbb, dashed);
+
+                img {
+                    width: .6rem;
+                    height: 100%;
+                }
+
+                div {
+                    @include flex();
+                    height: 100%;
+                    text-indent: .15rem;
+
+                    h3 {
+                        font-size: .16rem;
+                        line-height: .32rem;
+                        color: #000;
+                        @include ellipsis(null 1);
+                        font-weight: normal;
+                    }
+
+                    p:nth-child(2) {
+                        width: 2rem;
+                        height: .24rem;
+                        line-height: .24rem;
+                        font-size: .12rem;
+                        color: #8e8e8e;
+                        @include ellipsis(null 1);
+                    }
+
+                    p:nth-child(3) {
+                        width: 1.8rem;
+                        height: .24rem;
+                        line-height: .24rem;
+                        font-size: .12rem;
+                        color: #8e8e8e;
+                        @include flexbox();
+                        @include justify-content(space-between);
+                    }
+                }
+
+                h2 {
+                    width: .4rem;
+                    color: #fe6e00;
+                    font-size: .16rem;
+                    line-height: .32rem;
+
+                    span {
+                        line-height: 29px;
+                        color: #c6c6c6;
+                    }
+                }
+            }
+        }
+
+        .coming {
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+
+            li {
+                width: 100%;
+                height: 1.25rem;
+                padding: .2rem 0;
+                @include flexbox();
+                @include border(0 0 1px 0, #bbb, dashed);
+               
+                img {
+                    width: .6rem;
+                    height: 100%;
+                }
+
+                div {
+                    width: 2rem;
+                    height: 100%;
+                    text-indent: .15rem;
+                    padding-right: .2rem;
+                    @include flex();
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include justify-content(space-between);
+
+                    h3 {
+                        width: 100%;
+                        height: .32rem;
+                        font-size: .16rem;
+                        line-height: .32rem;
+                        font-weight: normal;
+                        color: #000;
+                        @include flexbox();
+                        @include justify-content(space-between);
+
+                        span:last-child {
+                            color: #c6c6c6
+                        }
+                    }
+
+                    p {
+                        font-size: .12rem;
+                        line-height: .24rem;
+                        color: #ffb375;
+
+                        span {
+                            margin-left: .05rem;
+                            margin-right: .14rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

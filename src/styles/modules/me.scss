@@ -1,0 +1,141 @@
+#me {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    @font-face {
+        font-family: 'yofont';
+        src: url('../../iconfonts/iconfont.eot');
+        src: url('../../iconfonts/iconfont.eot?#iefix') format('embedded-opentype'),
+            url('../../iconfonts/iconfont.woff') format('woff'),
+            url('../../iconfonts/iconfont.ttf') format('truetype'),
+            url('../../iconfonts/iconfont.svg#iconfont') format('svg');
+    }
+
+    .title {
+        width: 4.66rem;
+        height: 1.52rem;
+        padding: .36rem .12rem .24rem .46rem;
+        background: #333;
+        color: #fff;
+        @include flexbox();
+
+        img {
+            width: .92rem;
+            height: .92rem;
+            @include border-radius(50%);
+        }
+
+        >div {
+            margin-left: .1rem;
+            padding-top: .16rem;
+
+            p:nth-child(2) {
+                font-size: .12rem;
+            }
+
+            span {
+                font-size: .12rem;
+                padding: .05rem 0;
+                color: #ffbd80;
+                text-decoration: underline;
+
+            }
+        }
+    }
+
+    .info {
+        padding: 0 .12rem;
+        width: 100%;
+        height: .6rem;
+        font-size: .12rem;
+        background: #fff;
+        margin: .15rem 0;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+
+        p:first-child {
+            i {
+                display: inline-block;
+                width: .24rem;
+                height: .24rem;
+                margin-right: .1rem;
+                @include border-radius(50%);
+                color: #fff;
+                line-height: .24rem;
+                font-size: .14rem;
+                text-align: center;
+            }
+        }
+
+        p:nth-child(2) {
+            span:first-child {
+                color: #e7a858;
+                margin-right: .1rem;
+            }
+
+            span:last-child {
+                color: #bdbdbd;
+                margin-left: .1rem;
+            }
+
+            .span {
+                color: #bdbdbd;
+                margin: 0 !important;
+            }
+        }
+
+    }
+
+    .info:nth-child(1) {
+        i {
+            background: #7bcdcc
+        }
+    }
+
+    .info:nth-child(2) {
+        i {
+            background: #bbcea5
+        }
+    }
+
+    .info:nth-child(3) {
+        i {
+            background: #95c0ea
+        }
+    }
+
+    .info:nth-child(4) {
+
+        i {
+            background: #ffb978
+        }
+    }
+
+    .info:nth-child(5) {
+
+        i {
+            background: #faa0b5
+        }
+    }
+
+    .info:nth-child(6) {
+
+        i {
+            background: #80dae6
+        }
+    }
+
+    .info:nth-child(6) {
+        i {
+            background: #a4c9e5
+        }
+    }
+
+    .div {
+        .info {
+            margin: 0;
+        }
+    }
+}

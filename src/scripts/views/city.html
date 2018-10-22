@@ -1,0 +1,37 @@
+<div id="city">
+    <div>
+        <p>GPS定位你的城市</p>
+        <ul>
+            <li data-city="12">北京</li>
+        </ul>
+    </div>
+    <div class="city">
+        <p>热门城市</p>
+        <ul>
+            <li data-city="12">北京</li>
+            <li data-city="11">上海</li>
+            <li data-city="13">广州</li>
+            <li data-city="10">深圳</li>
+        </ul>
+    </div>
+
+    <div class="word">
+        <p>按字母排序</p>
+        <ul>
+            {{#each city}}
+            <li data-go="{{word}}">{{word}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    {{#each city}}
+    <div id="{{word}}" class="city">
+        <p>{{word}}</p>
+        <ul>
+            {{#each data}}
+            <li data-city="{{id}}">{{name}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+</div>

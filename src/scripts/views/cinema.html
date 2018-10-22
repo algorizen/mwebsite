@@ -1,0 +1,16 @@
+<div id="cinema">
+    {{#each cinema}}
+    <div>
+        <h3>{{district}}</h3>
+        <ul>
+            {{#each data}}
+            <li data-cinema="{{id}}">
+                <p><span class="name">{{name}}</span><i>座</i><span>></span></p>
+                <p>{{address}}</p>
+                <p>距离未知</p>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+</div>
